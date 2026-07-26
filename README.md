@@ -10,6 +10,9 @@
   <a href="https://kevininocol.github.io/kevinadierinofuentecolque.github.io/">
     <img src="https://img.shields.io/badge/Portfolio-0b1220?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio">
   </a>
+  <a href="https://www.linkedin.com/in/kevin-inofuente-colque">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
   <a href="https://kevininocol.github.io/reinforcement-learning-gmm-sac-ppo-calvin/">
     <img src="https://img.shields.io/badge/Research-8b5cf6?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Research">
   </a>
@@ -68,6 +71,17 @@ In parallel, I'm a PhD student in Computer Engineering at UNICAMP researching
 
 ## Featured work
 
+### 🏗️ [AgentForge — multi-tenant agent runtime (SaaS)](https://github.com/KevinInoCol/AgentForge)
+
+No hardcoded prompt: every GoHighLevel sub-account configures its own agent from the
+dashboard, and the runtime loads that config **dynamically per incoming message** — one
+service serving all tenants. Inbound webhooks return fast and enqueue; a Redis **debounce
+buffer** merges rapid-fire user messages into a single inference; async workers then run one
+full turn — agent factory, chat history, pgvector RAG retrieval and CRM tools (scheduling,
+tags, custom fields) — before replying.
+
+`FastAPI` · `LangChain` · `Supabase/pgvector` · `Redis` · `Next.js` · `Multi-tenant`
+
 ### 🤖 [DataBot — Multi-tool WhatsApp agent with guardrails & observability](https://github.com/KevinInoCol/Project-LangChain-Agent-for-Whatsapp-with-KB-CH-Multitool-and-Security-Langfuse)
 
 Production support agent serving WhatsApp through Chatwoot. RAG over a private knowledge
@@ -86,19 +100,31 @@ dataset, served via Streamlit and containerized with Docker.
 
 `LangGraph` · `BigQuery` · `SQLAlchemy` · `Streamlit` · `Docker`
 
-### 🕸️ [Multi-agent scraper → profiler → copywriter](https://github.com/KevinInoCol/Project-LangGraph-Multiagente-Scraper-Profiler-Copywriter)
+### 🕸️ [Multi-agent cold email pipeline](https://github.com/KevinInoCol/Project-LangGraph-Multiagente-Scraper-Profiler-Copywriter)
 
-A LangGraph pipeline where specialized agents hand work down a chain: scrape a target,
-build an audience profile from it, then generate copy tuned to that profile.
+Give it a company URL and three specialized agents hand work down a chain: a **scraper**
+crawls the site (Apify), a **profiler** infers pain points, tech stack and ideal customer,
+and a **copywriter** writes a personalized cold email. Non-conversational, fully
+orchestrated as a LangGraph pipeline.
 
-`LangGraph` · `Multi-agent orchestration`
+`LangGraph` · `Multi-agent orchestration` · `Apify`
 
-### 🎙️ [Voice agent over Google Sheets](https://github.com/KevinInoCol/Project-LangChain-Agente-Voz-Google-Sheets)
+### 🎙️ [Voice agent over a property dataset](https://github.com/KevinInoCol/Project-LangChain-Agente-Voz-Google-Sheets)
 
-Voice-driven agent that reads from and writes to Google Sheets — speech in, structured
-data operations out.
+You speak, Whisper transcribes, a LangChain agent reasons over a pandas dataframe of São
+Paulo rental listings, and the answer comes back as speech via OpenAI TTS. Full
+voice-in / voice-out loop.
 
-`LangChain` · `Speech-to-text` · `Google Sheets API`
+`LangChain` · `Whisper` · `pandas` · `OpenAI TTS`
+
+### 🏘️ [Kommo CRM sales agent — cloud vs local LLM](https://github.com/KevinInoCol/Agente-Conversacional-Kommo-CRM-LMStudio-VS-OpenAI)
+
+Real-estate sales agent wired into **Kommo CRM** through webhooks: answers from a RAG
+policy base, searches listings in Google Sheets, and drives the sales funnel (moves stages,
+updates custom fields) via tool calling. Swaps between **OpenAI** and a **local LM Studio
+model** by changing a single environment variable.
+
+`LangGraph` · `Kommo CRM` · `RAG` · `LM Studio` · `Tool calling`
 
 ### ⚙️ MLOps pipelines
 
