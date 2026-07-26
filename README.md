@@ -179,5 +179,3 @@ method. 📄 *Paper in preparation* · with Maria Fernanda Paulino Gomes.
 <p align="center">
   <i>Open to collaboration on LLM agents, applied AI and robot learning.</i>
 </p>
-
-<!-- profile readme -->
